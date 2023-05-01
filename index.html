@@ -12,7 +12,7 @@
     <!-- Header of Page -->
     <header>
         <!-- Hidden Header bc I Need One Apparently -->
-        <h1>Home Page</h1>
+        <h1 id="hidden">Home Page</h1>
         <!-- Where the random quote will show up -->
         <p id="headerQuote"></p>
         <!-- Where the source of the random quote will go -->
@@ -22,19 +22,19 @@
     <!-- Main body of Page -->
     <main>
         <!-- Section to divide the page into 3 for sidebars -->
-        <section>
+        <section class="holdBars">
             <!-- Left sidebar, just image -->
-            <div></div>
+            <div class="sidebar"></div>
 
             <!-- Center content -->
-            <section>
+            <section class="holdContent">
                 <!-- About Me snippet -->
-                <article>
+                <article class="holdVerticalAlign">
                     <!-- Me name -->
                     <h2>Justus Pettit</h2>
 
                     <!-- Me pic -->
-                    <img src="" alt="Justus Pettit, center">
+                    <img src="images/IMG_2233.JPG" alt="Justus Pettit, center">
 
                     <!-- Where the random descriptor goes -->
                     <p id="amDescriptor"></p>
@@ -44,7 +44,7 @@
                 </article>
 
                 <!-- Resume snippet -->
-                <article>
+                <article class="resumeSnip">
                     <!-- commented out "resume" -->
                     <p class="comment">&lt;!-- Resume --&gt;</p>
 
@@ -52,6 +52,8 @@
                     
                     <!-- script tag -->
                     <p class="red">&lt;script&gt;</p>
+
+                    <br>
 
                     <!-- declaring class justus -->
                     <p class="colorDiv">    
@@ -203,12 +205,25 @@
                         <span class="white">&rcub;</span>
                     </p>
 
+                    <!-- end skils -->
+                    <p class="colorDiv">
+                        <span class="comment">&centerdot; &centerdot;</span>
+                        <span class="white">&rcub;</span>
+                    </p>
+
+                    <br>
+
+                    <!-- end script -->
+                    <p class="colorDiv">
+                        <span class="red">&lt;/script&gt;</span>
+                    </p>
+
                     <br>
 
                     <p class="colorDiv">
-                        <span class="green">&lt;a href="ResumePage.html"&gt;</span>
-                        <span class="lightGreen">See More</span>
-                        <span class="green">&lt;/a&gt;</span>
+                        <span class="darkGreen">&lt;a href="ResumePage.html"&gt;</span>
+                        <span class="lightGreen"><a class="lightGreen" href="resume.html">See More</a></span>
+                        <span class="darkGreen">&lt;/a&gt;</span>
                     </p>
                 </article>
 
@@ -219,16 +234,19 @@
                     <!-- slide 1 -->
                     <div class="slide">
                         <img src="" alt="">
+                        <p></p>
                     </div>
   
                     <!-- slide 2 -->
                     <div class="slide">
                         <img src="" alt="">
+                        <p></p>
                     </div>
 
                     <!-- slide 3 -->
                     <div class="slide">
                         <img src="" alt="">
+                        <p></p>
                     </div>
 
                     <!-- Control buttons -->
@@ -239,14 +257,14 @@
                 <!-- https://blog.logrocket.com/build-image-carousel-from-scratch-vanilla-javascript/ -->
 
                 <!-- Contact snippet -->
-                <article>
+                <article class="holdVerticalAlign">
                     <h2>Want to Talk?</h2>
                     <a href="contact.html">Contact Me Here</a>
                 </article>
             </section>
 
             <!-- Right sidebar, just image -->
-            <div></div>
+            <div class="sidebar"></div>
         </section>
     </main>
 

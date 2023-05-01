@@ -1,0 +1,171 @@
+/* laoding fonts in */
+
+@font-face {
+    font-family: Outrun Future;
+    src: url(/fonts/Outrun-future.otf);
+}
+
+@font-face {
+    font-family: Bubble Font;
+    src: url(/fonts/bubleFont.TTF);
+}
+
+@font-face {
+    font-family: IBM Plex Mono;
+    src: url(/fonts/IBMPlexMono-Regular.ttf);
+}
+
+/* give backhground color */
+
+body {
+    background-color: #2B0156;
+    margin: 0px;
+}
+
+/* make things show up */
+
+* {
+    color: #2FE60F;
+}
+
+/* attempting to apply fonts */
+
+h1 {
+    font-family: Outrun Future;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Bubble Font;
+    color: white;
+}
+
+a,
+p {
+    font-family: IBM Plex Mono;
+}
+
+/* INDEX */
+
+/* making the header flex */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* hiding the h1 bc it's not supposed to be there */
+
+#hidden {
+    position: absolute;
+    top: -2000px;
+}
+
+/* styling the quote */
+
+#headerQuote,
+#headerSource {
+    font-family: Outrun Future;
+    color: #00FFFD;
+    text-shadow: #D600D6;
+}
+
+/* setting up home page main content */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.holdBars{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sidebar {
+    width: 7.5%;
+    background: rgb(214,0,214);
+    background: linear-gradient(180deg, rgba(214,0,214,1) 0%, rgba(0,255,253,1) 100%);
+}
+
+.holdContent {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.holdContent > article {
+    margin-bottom: 150px;
+}
+
+/* fixing About Me snippet */
+
+.holdVerticalAlign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 20%;
+}
+
+/* fixing resume snippet */
+
+.comment {
+    color: grey;
+}
+
+.red {
+    color: red;
+}
+
+.purp {
+    color: #D600D6;
+}
+
+.lightGreen {
+    color: #B9F3AF;
+}
+
+.white {
+    color: white;
+}
+
+.lightBlue {
+    color: #B9FFFE;
+}
+
+.blue {
+    color: #00FFFD;
+}
+
+.darkGreen {
+    color: #1A8706;
+}
+
+.resumeSnip {
+    width: 50%;
+    background-color: #21053D;
+}
+
+.resumeSnip > p {
+    margin: 0px;
+}
+
+/* styling footer */
+
+footer {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #21053D;
+}
