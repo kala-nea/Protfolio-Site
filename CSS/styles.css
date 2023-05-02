@@ -15,6 +15,20 @@
     src: url(/fonts/IBMPlexMono-Regular.ttf);
 }
 
+/* creating animations */
+
+@keyframes hoverAni {
+    from {padding-top: 0px;
+        padding-bottom: 10px;}
+    to {padding-top: 10px;
+        padding-bottom: 0px;}
+}
+
+@keyframes quoteTest {
+    from {color: #00FFFD;}
+    to {color: #D600D6;}
+}
+
 /* give backhground color */
 
 body {
@@ -69,9 +83,29 @@ header {
 
 #headerQuote,
 #headerSource {
+    text-align: center;
+    margin: 12.5% 10%;
+    font-size: 75px;
     font-family: Outrun Future;
     color: #00FFFD;
-    text-shadow: #D600D6;
+    -webkit-text-stroke: #D600D6 1.5px;
+}
+
+#headerQuote {
+    margin-bottom: 0;
+}
+
+#headerSource {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+    -webkit-text-stroke: #D600D6 1px;
+}
+
+/* making the h2s the rigth size */
+
+h2 {
+    font-size: 55px;
 }
 
 /* setting up home page main content */
@@ -81,6 +115,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 }
 
 .holdBars{
@@ -92,10 +127,24 @@ main {
 .sidebar {
     width: 7.5%;
     background: rgb(214,0,214);
-    background: linear-gradient(180deg, rgba(214,0,214,1) 0%, rgba(0,255,253,1) 100%);
+    background: linear-gradient(180deg, rgba(214,0,214,1) 20%, rgba(0,255,253,1) 100%);
+}
+
+.sidebarTrongle {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.sidebarTronglePoly {
+    width: 100%;
+}
+
+.rightsidebartrongle {
+    transform: scaleX(-1.01);
 }
 
 .holdContent {
+    margin-top: 250px;
     width: 85%;
     display: flex;
     flex-direction: column;
@@ -168,4 +217,27 @@ footer {
     margin: 0px;
     padding: 0px;
     background-color: #21053D;
+}
+
+footer > * {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0;
+    padding: 50px;
+}
+
+footer > nav > a:hover {
+    animation-name: hoverAni;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+footer > nav > a {
+    font-family: Bubble Font;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    padding-bottom: 10px;
 }
