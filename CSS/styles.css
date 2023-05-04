@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Outrun Future;
-    src: url(/fonts/Outrun-future.otf);
+    src: url(/fonts/skirmisherhalfital.ttf);
 }
 
 @font-face {
@@ -33,6 +33,10 @@
 
 body {
     background-color: #2B0156;
+    /* background-image: url(/images/bg2.gif);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; */
     margin: 0px;
 }
 
@@ -46,6 +50,7 @@ body {
 
 h1 {
     font-family: Outrun Future;
+    font-weight: normal;
 }
 
 h2,
@@ -70,6 +75,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 700px;
+}
+
+#indexHead {
+    justify-content: center;
 }
 
 /* hiding the h1 bc it's not supposed to be there */
@@ -82,24 +92,25 @@ header {
 /* styling the quote */
 
 #headerQuote,
-#headerSource {
+#headerSource,
+h1 {
     text-align: center;
     margin: 12.5% 5%;
-    font-size: 75px;
+    font-size: 100px;
     font-family: Outrun Future;
     color: #00FFFD;
     -webkit-text-stroke: #D600D6 1.5px;
 }
 
 #headerQuote {
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
 #headerSource {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 45px;
-    -webkit-text-stroke: #D600D6 1px;
+    font-size: 50px;
+    -webkit-text-stroke: #D600D6 0.75px;
 }
 
 /* making the h2s the rigth size */
@@ -126,8 +137,14 @@ main {
 
 .sidebar {
     width: 7.5%;
+    overflow-y: hidden;
+}
+
+.sideBG {
+    height: 100%;
     background: rgb(214,0,214);
     background: linear-gradient(180deg, rgba(214,0,214,1) 20%, rgba(0,255,253,1) 100%);
+    margin-top: -4px;
 }
 
 .sidebarTrongle {
@@ -283,12 +300,15 @@ a:not( footer > nav > a ):hover {
     border-radius: 50%;
     z-index: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #21053d9f;
+    /* background: radial-gradient(circle, #21053d9f 30%, rgba(0,255,253,0) 65%); */
     font-size: 18px;
 }
   
-.btn:active {
+.btn:hover {
     transform: scale(1.1);
+    transform:translateY(5px) ;
+    transition: all ease 0.2s;
 }
   
 .btn-prev {
@@ -316,23 +336,23 @@ a:not( footer > nav > a ):hover {
 
 @keyframes quoteAni {
     from {
-        color: #2B0156;
-        -webkit-text-stroke-width: 0;
+        color: #2b015600;
+        -webkit-text-stroke-color: #2b015600;
     }
     to {
         color: #00FFFD;
-        -webkit-text-stroke: #D600D6 1.5px;
+        -webkit-text-stroke-color: #D600D6;
     }
 }
 @keyframes quoteAniB {
     from {
         color: #00FFFD;
-        -webkit-text-stroke: #D600D6 1.5px;
+        -webkit-text-stroke-color: #D600D6;
         
     }
     to {
-        color: #2B0156;
-        -webkit-text-stroke-width: 0;
+        color: #2b015600;
+        -webkit-text-stroke-color: #2b015600;
     }
 }
 
@@ -376,4 +396,27 @@ a:not( footer > nav > a ):hover {
     animation-name: descAniB;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+}
+
+/* goof for other pages */
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25%;
+}
+
+h4 a {
+    font-family: Bubble Font;
+    color: white;
+}
+
+header nav {
+    width: 70%;
+    padding: 0 15%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#21053D
 }
