@@ -20,6 +20,11 @@ let quotesList = [
     [`"BY THE POWER OF THIS AMULET I WEILD, I'LL CROSS THE THRESHOLD TO A UNIVERSE OF STEEL"`, "Fly Away, Gloryhammer"],
     [`"MY FORCES CONSPIRE TO BRING BACK THE WARMTH OF YOUR SMILE"`, "Silent Tears of Frozen Princess, Gloryhammer"],
     // [`"That's whats up"`, "Daniel Gaytan"],
+    [`"FIGHTING WITH THE POWER OF THE ANCIENT, HOLY, TRAGIC, RAGING LASER DRAGON FIRE"`, "Power of the Laser Dragon Fire, Gloryhammer"],
+    [`"I WILL BE FEARLESS AND STRONG INTO THE SKIES AND BEYOND"`, "To the Skies and Beyond, Brothers of Metal"],
+    [`"THERE IS A STAR IN THE SKY, SHINING UP, LEADING MY WAY"`, "Rising High, Serenity"],
+    [`"GLORIOUS, RISE VICTORIOUS, SHINE EUPHORIOUS"`, "Dark Crystal, Power Paladin"],
+    [`"REMEMBER THE HEROES WHO DIED IN THE WAR OF SPACE DUNDEE, LOST IN ANOTHER GALAXY"`, "Power of the Laser Dragon Fire, Gloryhammer"]
 ];
 
 let descList = [
@@ -70,18 +75,27 @@ function changeQuote () {
     },1000);
 }
 
+let prevQuote;
+
 // function to change quote and source
 function getQuote () {
     // random number determines which line of list
     let quoteNum = Math.floor(Math.random() * (quotesList.length - 1));
     let descNum = Math.floor(Math.random() * (descList.length - 1))
 
-    // change text to the quote and source respectively
-    // console.log(quotesList[quoteNum][0]);
-    // console.log(quotesList[quoteNum][1]);
-    headerQuote.innerText = quotesList[quoteNum][0];
-    headerSource.innerText = quotesList[quoteNum][1];
-    amDescriptor.innerText = descList[descNum];
+    if (quoteNum == prevQuote) {
+        getQuote();
+    } else {
+        // change text to the quote and source respectively
+        // console.log(quotesList[quoteNum][0]);
+        // console.log(quotesList[quoteNum][1]);
+        headerQuote.innerText = quotesList[quoteNum][0];
+        headerSource.innerText = quotesList[quoteNum][1];
+        amDescriptor.innerText = descList[descNum];
+        prevQuote = quoteNum;
+    }
+
+    
 }
 
 
@@ -93,55 +107,104 @@ headerSource.addEventListener("click", changeQuote);
 // code for carousel
 
 // Select all slides
-const slides = document.querySelectorAll(".slide");
+const slides1 = document.querySelectorAll(".slide1");
 
 // loop through slides and set each slides translateX property to index * 100% 
-slides.forEach((slide, indx) => {
+slides1.forEach((slide, indx) => {
     slide.style.transform = `translateX(${indx * 100}%)`;
 });
 
 // select next slide button
-const nextSlide = document.querySelector(".btn-next");
+const nextSlide1 = document.querySelector(".btn-next1");
 
 // current slide counter
-let curSlide = 0;
+let curSlide1 = 0;
 // maximum number of slides
-let maxSlide = slides.length - 1;
+let maxSlide1 = slides1.length - 1;
 
 // add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
+nextSlide1.addEventListener("click", function () {
     // check if current slide is the last and reset current slide
-    if (curSlide === maxSlide) {
-        curSlide = 0;
+    if (curSlide1 === maxSlide1) {
+        curSlide1 = 0;
     } else {
-        curSlide++;
+        curSlide1++;
     }
 
 //   move slide by -100%
-    slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    slides1.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
     });
 });
 
 // select prev slide button
-const prevSlide = document.querySelector(".btn-prev");
+const prevSlide1 = document.querySelector(".btn-prev1");
 
 // add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
+prevSlide1.addEventListener("click", function () {
     // check if current slide is the first and reset current slide to last
-    if (curSlide === 0) {
-        curSlide = maxSlide;
+    if (curSlide1 === 0) {
+        curSlide1 = maxSlide1;
     } else {
-        curSlide--;
+        curSlide1--;
     }
 
     //   move slide by 100%
-    slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+    slides1.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
     });
 });
 
 
+// Carousel but again ahggg
 
+// Select all slides
+const slides2 = document.querySelectorAll(".slide2");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slides2.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide2 = document.querySelector(".btn-next2");
+
+// current slide counter
+let curSlide2 = 0;
+// maximum number of slides
+let maxSlide2 = slides2.length - 1;
+
+// add event listener and navigation functionality
+nextSlide2.addEventListener("click", function () {
+    // check if current slide is the last and reset current slide
+    if (curSlide2 === maxSlide2) {
+        curSlide2 = 0;
+    } else {
+        curSlide2++;
+    }
+
+//   move slide by -100%
+    slides2.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide2)}%)`;
+    });
+});
+
+// select prev slide button
+const prevSlide2 = document.querySelector(".btn-prev2");
+
+// add event listener and navigation functionality
+prevSlide2.addEventListener("click", function () {
+    // check if current slide is the first and reset current slide to last
+    if (curSlide2 === 0) {
+        curSlide2 = maxSlide2;
+    } else {
+        curSlide2--;
+    }
+
+    //   move slide by 100%
+    slides2.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide2)}%)`;
+    });
+});
 
 

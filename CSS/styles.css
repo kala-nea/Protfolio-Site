@@ -95,8 +95,8 @@ header {
 #headerSource,
 h1 {
     text-align: center;
-    margin: 12.5% 5%;
-    font-size: 100px;
+    margin: 12.5% 1%;
+    font-size: 120px;
     font-family: Outrun Future;
     color: #00FFFD;
     -webkit-text-stroke: #D600D6 1.5px;
@@ -138,6 +138,7 @@ main {
 .sidebar {
     width: 7.5%;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .sideBG {
@@ -145,11 +146,13 @@ main {
     background: rgb(214,0,214);
     background: linear-gradient(180deg, rgba(214,0,214,1) 20%, rgba(0,255,253,1) 100%);
     margin-top: -4px;
+    overflow-x: hidden;
 }
 
 .sidebarTrongle {
     width: 100%;
     aspect-ratio: 1/1;
+    overflow-x: hidden;
 }
 
 .sidebarTronglePoly {
@@ -180,8 +183,12 @@ main {
     align-items: center;
 }
 
+.center {
+    justify-content: center;
+}
+
 img {
-    width: 20%;
+    width: 55%;
 }
 
 /* fixing resume snippet */
@@ -219,11 +226,17 @@ img {
 }
 
 .resumeSnip {
-    width: 50%;
+    width: 100%;
     background-color: #21053D;
+    padding: 5px;
+}
+
+.resumeSnip > * {
+    width: 100%;
 }
 
 .resumeSnip > p {
+    font-size: 15px;
     margin: 0px;
 }
 
@@ -269,23 +282,46 @@ a:not( footer > nav > a ):hover {
 
 /* styling carusel */
 
-.slider {
+.slider1 {
     width: 100%;
-    max-width: 800px;
-    height: 350px;
+    max-width: 750px;
+    height: 550px;
     position: relative;
     overflow: hidden;
 }
-  
-.slide {
+
+.slider2 {
     width: 100%;
-    max-width: 800px;
-    height: 350px;
+    max-width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: 25px;
+}
+  
+.slide1 {
+    width: 100%;
+    max-width: 750px;
+    height: 550px;
     position: absolute;
     transition: all 0.5s;
 }
   
-.slide img {
+.slide1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide2 {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    position: absolute;
+    transition: all 0.5s;
+}
+  
+.slide2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -311,17 +347,27 @@ a:not( footer > nav > a ):hover {
     transition: all ease 0.2s;
 }
   
-.btn-prev {
+.btn-prev1 {
     top: 45%;
     left: 2%;
 }
   
-.btn-next {
+.btn-next1 {
     top: 45%;
     right: 2%;
 }
 
-.slide > p {
+.btn-prev2 {
+    top: 45%;
+    left: 2%;
+}
+  
+.btn-next2 {
+    top: 45%;
+    right: 2%;
+}
+
+.slide1 > p {
     width: 100%;
     text-align: center;
     position: absolute;
@@ -330,6 +376,19 @@ a:not( footer > nav > a ):hover {
 
     color: #2FE60F;
     background-color: #21053d9f;
+    font-size: 18px;
+}
+
+.slide2 > p {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+
+    color: #2FE60F;
+    background-color: #21053d9f;
+    font-size: 18px;
 }
 
 /* class shenanigans for animating quote */
@@ -419,4 +478,69 @@ header nav {
     justify-content: space-around;
     align-items: center;
     background-color:#21053D
+}
+
+/* make h3 beeg */
+
+h3 {
+    font-size: 35px;
+}
+
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+/* for having 2 things sibe by side */
+
+.twoSet {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 150px;
+}
+
+.twoSet > * {
+    width: 47%;
+    height: auto;
+    background-color: #21053D;
+}
+
+/* contact snippet changes */
+
+#contactSubHead {
+    font-size: 100px;
+}
+
+#contactLink {
+    font-size: 20px;
+}
+
+/* yo, four wheel? no, three wheel (the joke is that "four wheel" sounds like "for real". oh yeah this is where i make three column layout) */
+
+.threeWheel {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 150px;
+}
+
+.threeWheel > * {
+    width: 32%;
+    height: auto;
+    background-color: #21053D;
+}
+
+/* bg for protfolio section blehh */
+
+#protSect {
+    background-color: #21053D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pad {
+    padding: 25px;
 }
