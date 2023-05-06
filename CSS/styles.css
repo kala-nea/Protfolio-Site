@@ -544,3 +544,9 @@ h4 {
 .pad {
     padding: 25px;
 }
+
+/* make things on index smaller */
+
+.headCom {
+    font-size: 20px;
+}
