@@ -54,12 +54,13 @@ function changeQuote () {
     headerQuote.classList.add("quoteOut");
     headerSource.classList.add("quoteOut");
     amDescriptor.classList.add("descOut");
-
+    
     setTimeout(()=>{
         headerQuote.classList.remove("quoteOut");
         headerSource.classList.remove("quoteOut");
         amDescriptor.classList.remove("descOut");
         
+        console.log("-");
         getQuote();
     
         // make fade in
@@ -75,13 +76,17 @@ function changeQuote () {
     },1000);
 }
 
-let prevQuote;
+let prevQuote = 0;
+let prevDesc = 0;
 
 // function to change quote and source
 function getQuote () {
     // random number determines which line of list
     let quoteNum = Math.floor(Math.random() * (quotesList.length - 1));
-    let descNum = Math.floor(Math.random() * (descList.length - 1))
+    let descNum = Math.floor(Math.random() * (descList.length - 1));
+
+    console.log(prevDesc);
+    console.log(descNum);
 
     if (quoteNum == prevQuote) {
         getQuote();
@@ -91,11 +96,18 @@ function getQuote () {
         // console.log(quotesList[quoteNum][1]);
         headerQuote.innerText = quotesList[quoteNum][0];
         headerSource.innerText = quotesList[quoteNum][1];
-        amDescriptor.innerText = descList[descNum];
         prevQuote = quoteNum;
     }
 
-    
+    if(descNum == prevDesc){
+        console.log("doint");
+        getQuote();
+    }else{
+        // change descriptor
+        amDescriptor.innerText = descList[descNum]
+        prevDesc = descNum;
+        console.log("do");
+    }
 }
 
 
