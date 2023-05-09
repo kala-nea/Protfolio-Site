@@ -111,7 +111,7 @@ function getDesc () {
             descList[i] = descList[j];
             descList[j] = temp2;
         }
-        var temp2 = quotesList[0];
+        var temp2 = descList[0];
         descList[0] = descList[descList.length - 1];
         descList[descList.length - 1] = temp2;
         v = 0;
