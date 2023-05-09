@@ -187,6 +187,10 @@ main {
     justify-content: center;
 }
 
+.cetner {
+    text-align: center;
+}
+
 img {
     width: 55%;
 }
@@ -607,4 +611,8 @@ div:not(.slide1, .slide2) > img {
     position: relative;
     overflow: hidden;
     object-fit: cover;
+}
+
+#bigOne {
+    width: 50%;
 }

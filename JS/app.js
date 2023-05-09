@@ -24,7 +24,8 @@ let quotesList = [
     [`"I WILL BE FEARLESS AND STRONG INTO THE SKIES AND BEYOND"`, "To the Skies and Beyond, Brothers of Metal"],
     [`"THERE IS A STAR IN THE SKY, SHINING UP, LEADING MY WAY"`, "Rising High, Serenity"],
     [`"GLORIOUS, RISE VICTORIOUS, SHINE EUPHORIOUS"`, "Dark Crystal, Power Paladin"],
-    [`"REMEMBER THE HEROES WHO DIED IN THE WAR OF SPACE DUNDEE, LOST IN ANOTHER GALAXY"`, "Power of the Laser Dragon Fire, Gloryhammer"]
+    [`"REMEMBER THE HEROES WHO DIED IN THE WAR OF SPACE DUNDEE, LOST IN ANOTHER GALAXY"`, "Power of the Laser Dragon Fire, Gloryhammer"],
+    ["You will see the starborn rise again when the world has come to an end", "Rise Again, Symphony of Tragedy"]
 ];
 
 let descList = [
