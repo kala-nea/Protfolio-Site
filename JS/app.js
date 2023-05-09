@@ -25,7 +25,8 @@ let quotesList = [
     [`"THERE IS A STAR IN THE SKY, SHINING UP, LEADING MY WAY"`, "Rising High, Serenity"],
     [`"GLORIOUS, RISE VICTORIOUS, SHINE EUPHORIOUS"`, "Dark Crystal, Power Paladin"],
     [`"REMEMBER THE HEROES WHO DIED IN THE WAR OF SPACE DUNDEE, LOST IN ANOTHER GALAXY"`, "Power of the Laser Dragon Fire, Gloryhammer"],
-    ["You will see the starborn rise again when the world has come to an end", "Rise Again, Symphony of Tragedy"]
+    ["You will see the starborn rise again when the world has come to an end", "Rise Again, Symphony of Tragedy"],
+    ["I hope my path will be a guiding light for someone to follow", "The Roar of the Spark, Naoki Hashimoto"]
 ];
 
 let descList = [
@@ -63,6 +64,7 @@ function changeQuote () {
         
         console.log("-");
         getQuote();
+        getDesc();
     
         // make fade in
         headerQuote.classList.add("quoteIn");
@@ -77,44 +79,48 @@ function changeQuote () {
     },1000);
 }
 
-let prevQuote = 0;
-let prevDesc = 0;
+let x = 0;
 
-// function to change quote and source
 function getQuote () {
-    // random number determines which line of list
-    let quoteNum = Math.floor(Math.random() * (quotesList.length - 1));
-    let descNum = Math.floor(Math.random() * (descList.length - 1));
-
-    console.log(prevDesc);
-    console.log(descNum);
-
-    if (quoteNum == prevQuote) {
-        getQuote();
+    if (x >= quotesList.length-1) {
+        for (let i = quotesList.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            var temp = quotesList[i];
+            quotesList[i] = quotesList[j];
+            quotesList[j] = temp;
+        }
+        var temp = quotesList[0];
+        quotesList[0] = quotesList[quotesList.length - 1];
+        quotesList[quotesList.length - 1] = temp;
+        x = 0;
     } else {
-        // change text to the quote and source respectively
-        // console.log(quotesList[quoteNum][0]);
-        // console.log(quotesList[quoteNum][1]);
-        headerQuote.innerText = quotesList[quoteNum][0];
-        headerSource.innerText = quotesList[quoteNum][1];
-        prevQuote = quoteNum;
-    }
-
-    if(descNum == prevDesc){
-        console.log("doint");
-        getQuote();
-    }else{
-        // change descriptor
-        amDescriptor.innerText = descList[descNum]
-        prevDesc = descNum;
-        console.log("do");
+        console.log(x);
+        headerQuote.innerText = quotesList[x][0];
+        headerSource.innerText = quotesList[x][1];
+        x ++;
     }
 }
 
+let v = 0;
 
-// also change if click
-headerQuote.addEventListener("click", changeQuote);
-headerSource.addEventListener("click", changeQuote);
+function getDesc () {
+    if (v >= descList.length-1) {
+        for (let i = descList.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            var temp2 = descList[i];
+            descList[i] = descList[j];
+            descList[j] = temp2;
+        }
+        var temp2 = quotesList[0];
+        descList[0] = descList[descList.length - 1];
+        descList[descList.length - 1] = temp2;
+        v = 0;
+    } else {
+        console.log(v);
+        amDescriptor.innerText = descList[v];
+        v ++;
+    }
+}
 
 
 // code for carousel
