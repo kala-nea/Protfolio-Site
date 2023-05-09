@@ -24,11 +24,6 @@
         padding-bottom: 0px;}
 }
 
-@keyframes quoteTest {
-    from {color: #00FFFD;}
-    to {color: #D600D6;}
-}
-
 /* give backhground color */
 
 body {
