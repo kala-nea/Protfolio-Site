@@ -52,6 +52,32 @@ let amDescriptor = document.getElementById("amDescriptor");
     }, 7500)
 })();
 
+(function websitePeriodic () {
+    const interval1 = setInterval(function() {
+        if (curSlide1 === 0) {
+            curSlide1 = maxSlide1;
+        } else {
+            curSlide1--;
+        }
+    
+        //   move slide by 100%
+        slides1.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
+        });
+
+        if (curSlide2 === maxSlide2) {
+            curSlide2 = 0;
+        } else {
+            curSlide2++;
+        }
+    
+        //   move slide by -100%
+        slides2.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide2)}%)`;
+        });
+    }, 15000)
+})();
+
 // function to visually change
 function changeQuote () {
     // make fade out
