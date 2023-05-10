@@ -37,7 +37,8 @@ let descList = [
     "I am a future VFX artist",
     "I am a classic style enthusiast",
     "I am a pinball addict",
-    "I am a really cool guy"
+    "I am a really cool guy",
+    "I am a Heavy Metal Darklord Crasher"
 ];
 
 // getting the html elements for the quote and source
@@ -54,13 +55,13 @@ let amDescriptor = document.getElementById("amDescriptor");
 
 (function websitePeriodic () {
     const interval1 = setInterval(function() {
-        if (curSlide1 === 0) {
-            curSlide1 = maxSlide1;
+        if (curSlide1 === maxSlide1) {
+            curSlide1 = 0;
         } else {
             curSlide1++;
         }
     
-        //   move slide by 100%
+    //   move slide by -100%
         slides1.forEach((slide, indx) => {
             slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
         });
