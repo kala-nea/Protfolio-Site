@@ -25,10 +25,10 @@ let quotesList = [
     [`"THERE IS A STAR IN THE SKY, SHINING UP, LEADING MY WAY"`, "Rising High, Serenity"],
     [`"GLORIOUS, RISE VICTORIOUS, SHINE EUPHORIOUS"`, "Dark Crystal, Power Paladin"],
     [`"REMEMBER THE HEROES WHO DIED IN THE WAR OF SPACE DUNDEE, LOST IN ANOTHER GALAXY"`, "Power of the Laser Dragon Fire, Gloryhammer"],
-    ["You will see the starborn rise again when the world has come to an end", "Rise Again, Symphony of Tragedy"],
-    ["I hope my path will be a guiding light for someone to follow", "The Roar of the Spark, Naoki Hashimoto"],
-    ["Remember the strife makes us stronger when hard times get longer", "Fantasy, Aviators"],
-    ["Rise through the ice and a new dawn will arise", "Night of Winterlight, Twilight Force"]
+    [`"You will see the starborn rise again when the world has come to an end"`, "Rise Again, Symphony of Tragedy"],
+    [`"I hope my path will be a guiding light for someone to follow"`, "The Roar of the Spark, Naoki Hashimoto"],
+    [`"Remember the strife makes us stronger when hard times get longer"`, "Fantasy, Aviators"],
+    [`"Rise through the ice and a new dawn will arise"`, "Night of Winterlight, Twilight Force"]
 ];
 
 let descList = [
