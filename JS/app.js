@@ -20,7 +20,7 @@ let quotesList = [
     [`"BY THE POWER OF THIS AMULET I WEILD, I'LL CROSS THE THRESHOLD TO A UNIVERSE OF STEEL"`, "Fly Away, Gloryhammer"],
     [`"MY FORCES CONSPIRE TO BRING BACK THE WARMTH OF YOUR SMILE"`, "Silent Tears of Frozen Princess, Gloryhammer"],
     // [`"That's whats up"`, "Daniel Gaytan"],
-    [`"FIGHTING WITH THE POWER OF THE ANCIENT, HOLY, TRAGIC, RAGING LASER DRAGON FIRE"`, "Power of the Laser Dragon Fire, Gloryhammer"],
+    [`"FIGHTING WITH THE POWER OF THE LASER DRAGON FIRE"`, "Power of the Laser Dragon Fire, Gloryhammer"],
     [`"I WILL BE FEARLESS AND STRONG INTO THE SKIES AND BEYOND"`, "To the Skies and Beyond, Brothers of Metal"],
     [`"THERE IS A STAR IN THE SKY, SHINING UP, LEADING MY WAY"`, "Rising High, Serenity"],
     [`"GLORIOUS, RISE VICTORIOUS, SHINE EUPHORIOUS"`, "Dark Crystal, Power Paladin"],
@@ -57,7 +57,7 @@ let amDescriptor = document.getElementById("amDescriptor");
         if (curSlide1 === 0) {
             curSlide1 = maxSlide1;
         } else {
-            curSlide1--;
+            curSlide1++;
         }
     
         //   move slide by 100%
