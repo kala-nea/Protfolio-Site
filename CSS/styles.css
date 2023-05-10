@@ -612,6 +612,10 @@ div:not(.slide1, .slide2) > img {
     width: 50%;
 }
 
+button {
+
+}
+
 @media (max-width: 1024px) {
     .twoSet {
         flex-direction: column;
@@ -687,5 +691,13 @@ div:not(.slide1, .slide2) > img {
 
     #contactSubHead {
         font-size: 60px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
     }
 }
