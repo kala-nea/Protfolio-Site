@@ -673,11 +673,13 @@ button {
 @media (max-width: 555px) {
     #headerQuote,
     h1 {
-        font-size: 60px;
+        font-size: 40px;
+        -webkit-text-stroke-width: .5px;
     }
 
     #headerSource {
-        font-size: 25px;
+        font-size: 10px;
+        -webkit-text-stroke-width: .2px;
     }
 
     nav {
@@ -699,5 +701,9 @@ button {
 
     h3 {
         font-size: 20px;
+    }
+    
+    header {
+        height: 250px;
     }
 }
