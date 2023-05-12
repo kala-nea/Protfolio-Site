@@ -612,8 +612,8 @@ div:not(.slide1, .slide2) > img {
     width: 50%;
 }
 
-button {
-
+#lor > #text  {
+    margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
