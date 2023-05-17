@@ -99,3 +99,87 @@ function getQuote () {
 //     teams[teams.length - 1] = temp;
 // }
 // thx colbo
+
+
+// test smooth scroll on carousel
+
+(function websitePeriodic () {
+    const interval1 = setInterval(function() {
+        if (curSlide1 === maxSlide1) {
+            curSlide1 = 0;
+        } else {
+            curSlide1++;
+        }
+    
+    //   move slide by -100%
+        slides1.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
+        });
+
+        if (curSlide2 === maxSlide2) {
+            curSlide2 = 0;
+        } else {
+            curSlide2++;
+        }
+    
+        //   move slide by -100%
+        slides2.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide2)}%)`;
+        });
+    }, 15000)
+})();
+
+// Select all slides
+const slides1 = document.querySelectorAll(".slide1");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slides1.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide1 = document.querySelector(".btn-next1");
+
+// current slide counter
+let curSlide1 = 0;
+// maximum number of slides
+let maxSlide1 = slides1.length - 1;
+
+let overflow;
+
+// add event listener and navigation functionality
+nextSlide1.addEventListener("click", function () {
+    // check if current slide is the last and reset current slide
+    if (curSlide1 === maxSlide1) {
+        // erm actually we're gonna move the first slide over then go
+        overflow = 1
+        slides1[0]
+    } else if (overflow == 1) {
+        curSlide1++;
+    } else {
+        curSlide1++;
+    }
+
+//   move slide by -100%
+    slides1.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
+    });
+});
+
+// select prev slide button
+const prevSlide1 = document.querySelector(".btn-prev1");
+
+// add event listener and navigation functionality
+prevSlide1.addEventListener("click", function () {
+    // check if current slide is the first and reset current slide to last
+    if (curSlide1 === 0) {
+        curSlide1 = maxSlide1;
+    } else {
+        curSlide1--;
+    }
+
+    //   move slide by 100%
+    slides1.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide1)}%)`;
+    });
+});
