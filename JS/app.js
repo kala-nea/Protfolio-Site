@@ -256,3 +256,53 @@ prevSlide2.addEventListener("click", function () {
 });
 
 
+// Let's do this one more time
+
+// Select all slides
+const slides3 = document.querySelectorAll(".slide3");
+
+// loop through slides and set each slides translateX property to index * 100% 
+slides3.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide3 = document.querySelector(".btn-next3");
+
+// current slide counter
+let curSlide3 = 0;
+// maximum number of slides
+let maxSlide3 = slides3.length - 1;
+
+// add event listener and navigation functionality
+nextSlide3.addEventListener("click", function () {
+    // check if current slide is the last and reset current slide
+    if (curSlide3 === maxSlide3) {
+        curSlide3 = 0;
+    } else {
+        curSlide3++;
+    }
+
+//   move slide by -100%
+    slides3.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide3)}%)`;
+    });
+});
+
+// select prev slide button
+const prevSlide3 = document.querySelector(".btn-prev3");
+
+// add event listener and navigation functionality
+prevSlide3.addEventListener("click", function () {
+    // check if current slide is the first and reset current slide to last
+    if (curSlide3 === 0) {
+        curSlide3 = maxSlide3;
+    } else {
+        curSlide3--;
+    }
+
+    //   move slide by 100%
+    slides3.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide3)}%)`;
+    });
+});
